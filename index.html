@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="app">
+            <div id="info">
+                <p id = "active-todos">Активных задач - n</p>
+            </div>
+            <div id="todo-wrapper">
+                <div class="todo-item">
+                    <p class="todo-title">Заголовок</p>
+                    <div class="todo-info">
+                        <input type="checkbox" class="todo-success" disabled>
+                        <p class="deadline">20.03.2024</p>
+                    </div>
+                </div>
+                <div class="todo-item">
+                    <p class="todo-title">Заголовок</p>
+                    <div class="todo-info">
+                        <input type="checkbox" class="todo-success" disabled>
+                        <p class="deadline">20.03.2024</p>
+                    </div>
+                </div>
+            </div>
+            <div id="error">
+                Нет задач
+            </div>
+            <div id="edit-form">
+                <div id="top-info">
+                    <input type="text" value="Название">
+                    <input type="checkbox">
+                </div>
+                <div id="middle-info">
+                    <input type="date" id="">
+                    <p id="edit-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nisi, rem quae repudiandae quis quisquam ex veniam rerum! Quia non libero rerum alias repudiandae expedita odio, perferendis quae impedit vitae!
+                    </p>
+                </div>
+                <div id="edit-actions">
+                    <input type="button" value="OK">
+                    <input type="button" value="Cancel">
+                </div>
+            </div>
+        </div>
+        <script type="module" src="main.js"></script>
+    </body>
+</html>
