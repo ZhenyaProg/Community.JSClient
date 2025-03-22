@@ -12,6 +12,10 @@ body {
     align-items: center;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #app {
     width: 45vw;
     height: 75vh;
@@ -25,6 +29,9 @@ body {
     padding: 10px;
     background-color: rgba(159, 159, 236, 0.511);
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 #todo-wrapper {
@@ -32,7 +39,6 @@ body {
     border-radius: 5px;
     padding: 10px;
     background-color: rgba(159, 159, 236, 0.511);
-    display: none;
 }
 
 #edit-form {
@@ -43,6 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    display: none;
 }
 
 #edit-desc {
@@ -69,6 +76,9 @@ body {
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
 .todo-title {
@@ -80,4 +90,16 @@ body {
 .todo-info {
     display: flex;
     gap: 10px;
+}
+
+.remove-todo {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16pt;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+#pagination {
+    display: flex;
+    gap: 5px;
 }

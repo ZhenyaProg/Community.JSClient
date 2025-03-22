@@ -10,21 +10,23 @@
         <div id="app">
             <div id="info">
                 <p id = "active-todos">Активных задач - n</p>
+                <button>Добавить</button>
+                <div id="pagination">
+                    <button id="prev-todos"><</button>
+                    <p id="page-number">1</p>
+                    <button id="next-todos">></button>
+                </div>
             </div>
             <div id="todo-wrapper">
                 <div class="todo-item">
-                    <p class="todo-title">Заголовок</p>
-                    <div class="todo-info">
-                        <input type="checkbox" class="todo-success" disabled>
-                        <p class="deadline">20.03.2024</p>
+                    <div class="todo-item-info">
+                        <p class="todo-title">Заголовок</p>
+                        <div class="todo-info">
+                            <input type="checkbox" class="todo-success" disabled>
+                            <p class="deadline">20.03.2024</p>
+                        </div>
                     </div>
-                </div>
-                <div class="todo-item">
-                    <p class="todo-title">Заголовок</p>
-                    <div class="todo-info">
-                        <input type="checkbox" class="todo-success" disabled>
-                        <p class="deadline">20.03.2024</p>
-                    </div>
+                    <button class="remove-todo" type="button">Удалить</button>
                 </div>
             </div>
             <div id="error">
@@ -41,10 +43,10 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nisi, rem quae repudiandae quis quisquam ex veniam rerum! Quia non libero rerum alias repudiandae expedita odio, perferendis quae impedit vitae!
                     </p>
                 </div>
-                <div id="edit-actions">
-                    <input type="button" value="OK">
-                    <input type="button" value="Cancel">
-                </div>
+                <form id="edit-actions">
+                    <button type="submit">OK</button>
+                    <button type="reset">Cancel</button>
+                </form>
             </div>
         </div>
         <script type="module" src="main.js"></script>
