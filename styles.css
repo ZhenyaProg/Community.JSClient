@@ -54,6 +54,7 @@ button:hover {
 
 #edit-desc {
     text-align: justify;
+    resize: none;
 }
 
 #edit-actions {

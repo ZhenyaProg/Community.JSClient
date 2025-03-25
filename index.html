@@ -9,8 +9,7 @@
     <body>
         <div id="app">
             <div id="info">
-                <p id = "active-todos">Активных задач - n</p>
-                <button>Добавить</button>
+                <button id="add-todo">Добавить</button>
                 <div id="pagination">
                     <button id="prev-todos"><</button>
                     <p id="page-number">1</p>
@@ -18,36 +17,25 @@
                 </div>
             </div>
             <div id="todo-wrapper">
-                <div class="todo-item">
-                    <div class="todo-item-info">
-                        <p class="todo-title">Заголовок</p>
-                        <div class="todo-info">
-                            <input type="checkbox" class="todo-success" disabled>
-                            <p class="deadline">20.03.2024</p>
-                        </div>
-                    </div>
-                    <button class="remove-todo" type="button">Удалить</button>
-                </div>
             </div>
             <div id="error">
                 Нет задач
             </div>
-            <div id="edit-form">
+            <form name="todo-edit" id="edit-form">
                 <div id="top-info">
-                    <input type="text" value="Название">
-                    <input type="checkbox">
+                    <input id="todo-title" type="text" placeholder="Название">
+                    <input id="todo-success" type="checkbox">
                 </div>
                 <div id="middle-info">
-                    <input type="date" id="">
-                    <p id="edit-desc">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem nisi, rem quae repudiandae quis quisquam ex veniam rerum! Quia non libero rerum alias repudiandae expedita odio, perferendis quae impedit vitae!
-                    </p>
+                    <input type="date" id="todo-deadline">
+                    <textarea id="edit-desc" cols="30" rows="10">
+                    </textarea>
                 </div>
-                <form id="edit-actions">
-                    <button type="submit">OK</button>
-                    <button type="reset">Cancel</button>
-                </form>
-            </div>
+                <div id="edit-actions">
+                    <button name="todo-edit" type="submit">OK</button>
+                    <button name="todo-edit" type="reset">Отмена</button>
+                </div>
+            </form>
         </div>
         <script type="module" src="main.js"></script>
     </body>
