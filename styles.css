@@ -41,6 +41,15 @@ button:hover {
     background-color: rgba(159, 159, 236, 0.511);
 }
 
+#middle-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#todo-deadline {
+    width: 110px;
+}
+
 #edit-form {
     height: 40%;
     border-radius: 5px;
@@ -61,15 +70,6 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 25px;
-}
-
-#error {
-    text-align: center;
-    vertical-align: middle;
-    color: brown;
-    font-size: 32px;
-    font-weight: 700;
-    display: none;
 }
 
 .todo-item {

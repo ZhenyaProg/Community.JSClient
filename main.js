@@ -46,6 +46,7 @@ const updateTodos = async () => {
         renderTodos(todos)
     } catch(e) {
         console.log(`Error - ${e.message}`);
+        alert(e.message)
     }
 }
 
@@ -73,12 +74,22 @@ const createTodo = async () => {
             }),
             headers: { "Content-Type": "application/json" }
         }
-        await fetch(uri, request)
+        
+        const response = await fetch(uri, request)
+        const data = await response.json()
+        if(!response.ok) {
+            resetAfterEdit()
+            if(response.status == 400) {
+                throw new Error(JSON.stringify(data.errors))
+            }
+            throw new Error("че-то сломалось")
+        }
         await updateTodos()
-
         resetAfterEdit()
+        
     } catch(e) {
         console.log(`Error - ${e.message}`);
+        alert(e.message)
     }
 }
 
@@ -88,6 +99,7 @@ const deleteTodo = async(id) => {
         await updateTodos()
     } catch(e) {
         console.log(`Error - ${e.message}`);
+        alert(e.message)
     }
 }
 
@@ -138,6 +150,7 @@ const editTodo = async () => {
         resetAfterEdit()
     } catch(e) {
         console.log(`Error - ${e.message}`);
+        alert(e.message)
     }
 }
 
